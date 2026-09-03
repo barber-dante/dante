@@ -1,4 +1,4 @@
-          <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -12,12 +12,12 @@
             background-color: #1a1a1a;
             color: #e0e0e0;
             line-height: 1.6;
+            box-sizing: border-box;
         }
         .container {
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
-            box-sizing: border-box;
         }
         header {
             text-align: center;
@@ -44,7 +44,7 @@
             border-radius: 8px;
             padding: 25px 20px;
             margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
         .notice-title {
             color: #ff4a4a;
@@ -64,26 +64,39 @@
         </header>
 
         <main>
+            <!-- トップのお知らせカード -->
             <div class="notice-card">
-                <h2 class="notice-title">店舗移転のお知らせ</h2>
-                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
-                    いつも当店をご愛顧いただき、誠にありがとうございます。<br><br>
-                    この度、cut.in.danteは荻窪タウンセブンでの45年間の営業に区切りをつけ、新たな場所へと移転することとなりました。<br><br>
-                    現在、2026年10月のオープンを目指し、スタッフ一同、新天地でのスタートに向けて全力で準備を進めております。新しい環境で皆様にお会いできる日を、心より楽しみにしております。
+                <h2 class="notice-title">【店舗移転および現店舗 営業期間変更（延長）のお知らせ】</h2>
+                <p style="font-size: 14px; color: #ccc; margin-top: 0;">
+                    いつも cut.in.dante をご愛顧いただき、誠にありがとうございます。
                 </p>
-                
+                <p style="font-size: 14px; color: #ccc;">
+                    ご来店いただいたお客様には、現店舗（荻窪タウンセブン店）の営業を「9月27日まで」とお伝えしておりましたが、移転準備スケジュールの変更に伴い<strong>【10月25日（日）】</strong>まで営業を延長させてもらえる事になりました。
+                </p>
+                <p style="font-size: 14px; color: #ccc;">
+                    無理にご予定を調整してくださっていたお客様には、直前での日程変更となりご迷惑をおかけいたしますことを、心より深くお詫び申し上げます。
+                </p>
+                <p style="font-size: 14px; color: #ccc;">
+                    このお知らせで営業延長を知ってくださったお客様で、ご予約の変更や取り直しをご希望の方は、お手数ですがお電話にてご連絡いただけますと幸いです。柔軟に対応させていただきます。
+                </p>
+                <p style="font-size: 14px; color: #ccc;">
+                    また、皆様にお知らせしたかった「新店舗の場所」が無事に決定いたしました！現在は正式な契約手続きや、オープンに向けた内装工事の準備を全力で進めております。
+                </p>
+                <p style="font-size: 14px; color: #ccc; margin-bottom: 0;">
+                    荻窪タウンセブンでの45年間の営業の節目として、10月25日の最終営業日までスタッフ一同、感謝を込めて皆様をお迎えいたします。<br>
+                    新しい環境で皆様にお会いできるのを心より楽しみにしております！
+                </p>
             </div>
-        </main>
-    </div>
-</body>
-</html>
-          <div style="background-color: #222; border-left: 4px solid #c5a880; padding: 15px; margin-top: 20px; border-radius: 4px;">
-            <h3 style="color: #fff; font-size: 16px; margin-top: 0; margin-bottom: 10px;">大切なお客さまへ</h3>
-            <p style="color: #ccc; font-size: 14px; line-height: 1.6; margin: 0;">
-                直接のご挨拶や移転のご案内が届かなかったお客様、大変申し訳ありません。当店は場所を変え、新店舗にて皆様をまたお迎えできるよう元気に準備を進めております！またお会いできるのを心より楽しみにしております。
-            </p>
-        </div>
-                        <!-- SNSボタンのブロック -->
+
+            <!-- 大切なお客さまへカード -->
+            <div style="background-color: #222; border-left: 4px solid #c5a880; padding: 15px; margin-top: 20px; border-radius: 4px;">
+                <h3 style="color: #fff; font-size: 16px; margin-top: 0; margin-bottom: 10px;">大切なお客さまへ</h3>
+                <p style="color: #ccc; font-size: 14px; line-height: 1.6; margin: 0;">
+                    直接のご挨拶や移転のご案内が届かなかったお客様、大変申し訳ありません。当店は場所を変え、新店舗にて皆様をまたお迎えできるよう元気に準備を進めております！またお会いできるのを心より楽しみにしております。
+                </p>
+            </div>
+
+            <!-- SNSボタンのブロック -->
             <div style="text-align: center; margin-top: 30px;">
                 <!-- Instagramボタン -->
                 <a href="https://www.instagram.com/cut.in.dante?igsh=MTRsd3RhaDF1NXRodw==" target="_blank" style="display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
@@ -99,30 +112,23 @@
             <!-- 移転情報のブロック -->
             <div style="margin-top: 40px; margin-bottom: 30px;">
                 <h2 style="color: #fff; font-size: 20px; border-left: 4px solid #c5a880; padding-left: 10px;">移転情報（準備中）</h2>
-                <div style="margin-top: 20px;">
+                <div style="margin-top: 20px; margin-bottom: 20px;">
                     <p style="color: #c5a880; font-weight: bold; margin: 0;">■ 新店舗オープン時期</p>
-                    <p style="color: #fff; font-size: 18px; margin: 5px 0 0 0;">2026年 10月 予定</p>
+                    <p style="color: #fff; font-size: 18px; margin: 5px 0 0 0;">2026年 11月初旬 予定</p>
+                </div>
+                <div style="margin-bottom: 20px; border-top: 1px solid #333; padding-top: 20px;">
+                    <p style="color: #c5a880; font-weight: bold; margin: 0;">■ 新住所・新しい電話番号</p>
+                    <p style="color: #ccc; font-size: 14px; margin: 5px 0 0 0;">決定次第、こちらのページにてお知らせいたします。</p>
+                </div>
+                <div style="margin-bottom: 20px; border-top: 1px solid #333; padding-top: 20px;">
+                    <p style="color: #c5a880; font-weight: bold; margin: 0;">■ 旧電話番号（お問い合わせ）</p>
+                    <a href="tel:0333928799" style="display: block; background: #d4b58c; color: #1a1a1a; text-align: center; padding: 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 20px; margin-top: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                        📞 03-3392-8799
+                    </a>
+                    <p style="color: #888; font-size: 12px; text-align: center; margin-top: 8px;">※スマホからタップで発信できます</p>
                 </div>
             </div>
-
-
-        
-        <div style="margin-bottom: 20px; border-top: 1px solid #222; padding-top: 15px;">
-            <p style="color: #c5a880; font-weight: bold; margin-bottom: 5px;">■ 新住所・新しい電話番号</p>
-            <p style="font-size: 14px; color: #ccc; margin-left: 10px; line-height: 1.5;">決定次第、こちらのページにてお知らせいたします。</p>
-        </div>
-        
-        <div style="margin-bottom: 20px; border-top: 1px solid #222; padding-top: 15px;">
-            <p style="color: #c5a880; font-weight: bold; margin-bottom: 10px;">■ 旧電話番号（お問い合わせ）</p>
-            <a href="tel:0333928799" style="display: block; background: #c5a880; color: #1a1a1a; text-align: center; padding: 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 20px;">
-                📞 03-3392-8799
-            </a>
-            <p style="text-align: center; font-size: 11px; color: #888; margin-top: 8px;">※スマホからタップで発信できます</p>
-        </div>
+        </main>
     </div>
-
-    </main>
-</div>
 </body>
 </html>
-
