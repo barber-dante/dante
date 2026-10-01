@@ -6,46 +6,58 @@
     <title>店舗移転および現店舗 営業期間変更（延長）のお知らせ</title>
     <style>
         body {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            font-family: sans-serif;
-            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
         }
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #242424;
-            padding: 30px;
-            border-radius: 8px;
+            background-color: #1e1e1e;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
         h1 {
-            color: #ff4d4d;
-            font-size: 1.2rem;
+            color: #ff5252;
+            font-size: 1.25rem;
             text-align: center;
             margin-bottom: 25px;
+            line-height: 1.5;
         }
         h2 {
             color: #ffffff;
             font-size: 1.1rem;
-            border-bottom: 1px solid #444;
-            padding-bottom: 10px;
-            margin-top: 30px;
+            border-left: 4px solid #d4af37;
+            padding-left: 10px;
+            margin-top: 35px;
+            margin-bottom: 15px;
         }
         p {
             margin-bottom: 20px;
             font-size: 0.95rem;
         }
+        .section-box {
+            background-color: #252525;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 3px solid #d4af37;
+        }
         .btn {
             display: block;
             text-align: center;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 8px;
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .btn-instagram {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
@@ -57,20 +69,30 @@
         .btn-phone {
             background-color: #d4af37;
             color: #000000;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
         }
         .map-container {
             position: relative;
             width: 100%;
-            height: 300px;
+            height: 320px;
             margin-top: 15px;
             margin-bottom: 20px;
             border-radius: 8px;
             overflow: hidden;
+            background-color: #333;
         }
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: 0;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #d4af37;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            display: block;
         }
     </style>
 </head>
@@ -93,29 +115,31 @@
 
     <p>また、お知らせしておりました新店舗の場所ですが、無事に物件の契約が完了いたしました！現在はオープンに向けた内装工事の準備を全力で進めております。</p>
 
-    <p>荻窪タウンセブンでの45年間名の営業の節目として、10月25日までスタッフ一同精一杯頑張ります！皆様のご来店を心よりお待ちしております。新しい環境で皆様にお会いできるのも楽しみにしております！</p>
+    <p>荻窪タウンセブンでの45年間の営業の節目として、10月25日までスタッフ一同精一杯頑張ります！皆様のご来店を心よりお待ちしております。新しい環境で皆様にお会いできるのも楽しみにしております！</p>
 
-    <h2>大切なお客さまへ</h2>
-
-    <p>直接のご挨拶や移転のご案内が届かなかったお客様、大変申し訳ありません。当店は場所を変え、新店舗にて皆様をまたお迎えできるよう元気に準備を進めております！またお会いできるのを心より楽しみにしております。</p>
+    <div class="section-box">
+        <h2 style="margin-top: 0; border-left: none; padding-left: 0;">大切なお客さまへ</h2>
+        <p style="margin-bottom: 0;">直接のご挨拶や移転のご案内が届かなかったお客様、大変申し訳ありません。当店は場所を変え、新店舗にて皆様をまたお迎えできるよう元気に準備を進めております！またお会いできるのを心より楽しみにしております。</p>
+    </div>
 
     <a href="https://www.instagram.com/" class="btn btn-instagram" target="_blank" rel="noopener">Instagramで最新情報を見る</a>
     <a href="https://twitter.com/" class="btn btn-twitter" target="_blank" rel="noopener">X（旧Twitter）を見る</a>
 
     <h2>新店舗のご案内</h2>
     
-    <p><strong>■新店舗オープン時期</strong><br>
-    2026年 11月初旬 予定</p>
+    <span class="info-label">■新店舗オープン時期</span>
+    <p>2026年 11月初旬 予定</p>
 
-    <p><strong>■新住所</strong><br>
-    東京都杉並区天沼3丁目29-14（教会通り・3階建ての1階）</p>
+    <span class="info-label">■新住所</span>
+    <p>東京都杉並区天沼3丁目29-14（教会通り・3階建ての1階）</p>
 
-    <p><strong>■新店舗マップ</strong></p>
+    <span class="info-label">■新店舗マップ</span>
     <div class="map-container">
+        <!-- お手持ちのGoogle My Maps等の埋め込みURLに変更してご活用ください -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8553655169427!2d139.61905757628863!3d35.70557457257855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f2762a0a2dfd%3A0x6b637d7c67c52a4!2sTokyo%2C%20Suginami%20City%2C%20T_Amanuma%2C%203%20Chome%E2%88%9229%E2%88%9214!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <p><strong>■旧電話番号（お問い合わせ）</strong></p>
+    <span class="info-label">■旧電話番号（お問い合わせ）</span>
     <a href="tel:0333928799" class="btn btn-phone">📞 03-3392-8799</a>
 </div>
 
