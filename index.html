@@ -1,148 +1,196 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>店舗移転のお知らせ | cut.in.dante</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            box-sizing: border-box;
-        }
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            padding: 30px 0 20px;
-            border-bottom: 2px solid #333;
-        }
-        .shop-name {
-            font-size: 26px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            color: #fff;
-            margin: 0;
-        }
-        .subtitle {
-            font-size: 11px;
-            color: #888;
-            margin-top: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .notice-card {
-            background-color: #262626;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 25px 20px;
-            margin: 30px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        .notice-title {
-            color: #ff4a4a;
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【新店舗 電話番号決定およびご予約受付についてのお知らせ】| cut.in.dante</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 20px 16px;
+      line-height: 1.8;
+    }
+    .notice-card {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      padding: 24px 16px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      border: 1px solid #2a2a2a;
+    }
+    .title {
+      color: #ff4d4d;
+      font-size: 1.15rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .text {
+      font-size: 0.95rem;
+      color: #e0e0e0;
+      margin-bottom: 16px;
+    }
+    .highlight-red {
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+    .info-box {
+      background-color: #242424;
+      border-left: 4px solid #d4af37;
+      padding: 18px 16px;
+      margin: 24px 0;
+      border-radius: 4px;
+    }
+    .box-heading {
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin: 0 0 10px 0;
+    }
+    .btn-gold {
+      display: block;
+      background-color: #d4b886;
+      color: #000000;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      padding: 14px 0;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: opacity 0.2s;
+    }
+    .btn-gold:active {
+      opacity: 0.8;
+    }
+    .btn-sub {
+      display: block;
+      background-color: #333333;
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 8px;
+      border: 1px solid #555555;
+      margin-bottom: 6px;
+    }
+    .sub-note {
+      font-size: 0.75rem;
+      color: #aaaaaa;
+      display: block;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .notice-subbox {
+      font-size: 0.85rem;
+      color: #cccccc;
+      margin: 12px 0;
+      line-height: 1.6;
+      background-color: #1a1a1a;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #333333;
+    }
+    .asterisk-list {
+      font-size: 0.85rem;
+      color: #aaaaaa;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1.6;
+    }
+    .asterisk-list li {
+      margin-bottom: 4px;
+    }
+    .footer-text {
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin-bottom: 8px;
+    }
+    .footer-strong {
+      font-size: 0.9rem;
+      color: #ffffff;
+      font-weight: bold;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 class="shop-name">cut.in.dante</h1>
-            <div class="subtitle">Barber Shop & Shaving</div>
-        </header>
 
-        <main>
-            <!-- トップのお知らせカード -->
-            <div class="notice-card">
-                <h2 class="notice-title">【店舗移転および現店舗 営業期間変更（延長）のお知らせ】</h2>
-                <p style="font-size: 14px; color: #ccc; margin-top: 0;">
-                    いつも cut.in.dante をご愛顧いただき、誠にありがとうございます。
-                </p>
-                <p style="font-size: 14px; color: #ccc;">
-                    ご来店いただいたお客様には、現店舗（荻窪タウンセブン店）の営業を「9月27日まで」とお伝えしておりましたが、移転準備スケジュールの変更に伴い<strong>【10月25日（日）】</strong>まで営業を延長させてもらえる事になりました。
-                </p>
-                <p style="font-size: 14px; color: #ccc;">
-                    無理にご予定を調整してくださっていたお客様には、直前での日程変更となりご迷惑をおかけいたしますことを、心より深くお詫び申し上げます。
-                </p>
-                <p style="font-size: 14px; color: #ccc;">
-                    また、<strong>10月からは、平日2人体制、土日祝日3人体制</strong>で営業を行ってまいります。
-                </p>
-                <p style="font-size: 14px; color: #ccc;">
-                    このお知らせで営業延長を知ってくださったお客様で、ご予約の変更や取り直しをご希望の方は、お手数ですがお電話にてご連絡いただけますと幸いです。柔軟に対応させていただきます。
-                </p>
-                <p style="font-size: 14px; color: #ccc;">
-                    また、お知らせしておりました新店舗の場所ですが、無事に物件の契約が完了いたしました！現在はオープンに向けた内装工事の準備を全力で進めております。
-                </p>
-                <p style="font-size: 14px; color: #ccc; margin-bottom: 0;">
-                    荻窪タウンセブンでの45年間の営業の節目として、10月25日の最終営業日までスタッフ一同、感謝を込めて皆様をお迎えいたします。<br>
-                    新しい環境で皆様にお会いできるのも楽しみにしております！
-                </p>
-            </div>
+  <div class="notice-card">
 
-            <!-- 大切なお客さまへカード -->
-            <div style="background-color: #222; border-left: 4px solid #c5a880; padding: 15px; margin-top: 20px; border-radius: 4px;">
-                <h3 style="color: #fff; font-size: 16px; margin-top: 0; margin-bottom: 10px;">大切なお客さまへ</h3>
-                <p style="color: #ccc; font-size: 14px; line-height: 1.6; margin: 0;">
-                    直接のご挨拶や移転のご案内が届かなかったお客様、大変申し訳ありません。当店は場所を変え、新店舗にて皆様をまたお迎えできるよう元気に準備を進めております！またお会いできるのを心より楽しみにしております。
-                </p>
-            </div>
+    <!-- タイトル -->
+    <h2 class="title">
+      【cut.in.dante 新店舗電話番号決定および<br>ご予約受付についてのお知らせ】
+    </h2>
 
-            <!-- SNSボタンのブロック -->
-            <div style="text-align: center; margin-top: 30px;">
-                <!-- Instagramボタン -->
-                <a href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw==" target="_blank" style="display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-                    Instagramで最新情報を見る
-                </a>
-                <br>
-                <!-- X（旧Twitter）ボタン -->
-                <a href="https://x.com/DANTE_ogikubo" target="_blank" style="display: inline-block; background: #000000; color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; border: 1px solid #555; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-                    X（旧Twitter）を見る
-                </a>
-            </div>
+    <!-- 挨拶文 -->
+    <p class="text">
+      いつも cut.in.dante をご愛顧いただき、誠にありがとうございます。[span_0](start_span)[span_0](end_span)
+    </p>
 
-            <!-- 移転情報のブロック -->
-            <div style="margin-top: 40px; margin-bottom: 30px;">
-                <h2 style="color: #fff; font-size: 20px; border-left: 4px solid #c5a880; padding-left: 10px;">新店舗のご案内</h2>
-                
-                <div style="margin-top: 20px; margin-bottom: 20px;">
-                    <p style="color: #c5a880; font-weight: bold; margin: 0;">■ 新店舗オープン時期</p>
-                    <p style="color: #fff; font-size: 18px; margin: 5px 0 0 0;">2026年 11月初旬 予定</p>
-                </div>
+    <p class="text">
+      この度、オープンに向けた新店舗の電話番号が決定いたしましたのでお知らせいたします。[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)
+    </p>
 
-                <div style="margin-bottom: 20px; border-top: 1px solid #333; padding-top: 20px;">
-                    <p style="color: #c5a880; font-weight: bold; margin: 0;">■ 新住所</p>
-                    <p style="color: #fff; font-size: 16px; margin: 5px 0 0 0;">東京都杉並区天沼3丁目29-14（教会通り・3階建ての1階）</p>
-                </div>
+    <!-- 新電話番号・予約案内枠 -->
+    <div class="info-box">
+      <p class="box-heading">■ 新電話番号</p>
 
-                <!-- Googleマイマップ埋め込み -->
-                <div style="margin-bottom: 20px; border-top: 1px solid #333; padding-top: 20px;">
-                    <p style="color: #c5a880; font-weight: bold; margin: 0 0 10px 0;">■ 新店舗マップ</p>
-                    <div style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid #444;">
-                        <iframe src="https://www.google.com/maps/d/embed?mid=1C54SQwpSO2vOfzQSHbECMnnIA4IWuCw&ehbc=2E312F" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
+      <!-- 押せば繋がる新電話番号ボタン -->
+      <a href="tel:03-6276-9397" class="btn-gold">
+        📞 03-6276-9397
+      </a>
+      <span class="sub-note">※グランドオープン2日前頃より開通・タップで発信できます</span>
 
-                <div style="margin-bottom: 20px; border-top: 1px solid #333; padding-top: 20px;">
-                    <p style="color: #c5a880; font-weight: bold; margin: 0;">■ 旧電話番号（お問い合わせ）</p>
-                    <a href="tel:0333928799" style="display: block; background: #d4b58c; color: #1a1a1a; text-align: center; padding: 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 20px; margin-top: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-                        📞 03-3392-8799
-                    </a>
-                    <p style="color: #888; font-size: 12px; text-align: center; margin-top: 8px;">※スマホからタップで発信できます</p>
-                </div>
-            </div>
-        </main>
+      <p class="box-heading" style="margin-top: 20px;">■ 新店舗のご予約受付について</p>
+      <p style="font-size: 0.95rem; color: #ffffff; margin: 0 0 12px 0;">
+        新店舗のご予約受付は、<span class="highlight-red">【新電話が開通してから（グランドオープン2日前頃予定）】</span>開始とさせていただきます。
+      </p>
+
+      <div class="notice-subbox">
+        ※保健所の検査・確認が完了次第、グランドオープンおよび開通の正確な日程をお知らせいたします。
+      </div>
+
+      <ul class="asterisk-list">
+        <li>※新電話が開通するまでは、新店舗のご予約はお受けできませんのであらかじめご了承ください。</li>
+        <li>※電話の開通日時やグランドオープン日につきましては、確定次第改めてホームページおよびSNSにてお知らせいたします。</li>
+      </ul>
     </div>
+
+    <!-- 現店舗のご案内 -->
+    <p class="text" style="margin-bottom: 20px;">
+      現店舗（荻窪タウンセブン店）の営業期間<span class="highlight-red">【10月25日（日）】</span>までのご予約やお問い合せにつきましては、お手数ですが引き続き旧電話番号までご連絡いただけますと幸いです。[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span) 柔軟に対応させていただきます。[span_5](start_span)[span_5](end_span)
+    </p>
+
+    <!-- 旧電話番号ボタン -->
+    <div style="margin-bottom: 28px;">
+      <p style="font-size: 0.85rem; color: #cccccc; margin-bottom: 8px;">■ 旧電話番号（現店舗のお問い合わせ）</p>
+      <a href="tel:03-3392-8799" class="btn-sub">
+        📞 03-3392-8799
+      </a>
+      <span class="sub-note" style="margin-bottom: 0;">※スマホからタップで発信できます[span_6](start_span)[span_6](end_span)</span>
+    </div>
+
+    <!-- 結び -->
+    <p class="footer-text">
+      荻窪タウンセブンでの45年間の営業の節目として、10月25日の最終営業日までスタッフ一同、感謝を込めて皆様をお迎えいたします。[span_7](start_span)[span_7](end_span)
+    </p>
+    <p class="footer-strong">
+      新しい環境で皆様にお会いできるのも楽しみにしております！[span_8](start_span)[span_8](end_span)
+    </p>
+
+  </div>
+
 </body>
 </html>
