@@ -10,9 +10,37 @@
       color: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       margin: 0;
-      padding: 20px 16px;
+      padding: 30px 16px;
       line-height: 1.8;
     }
+    /* ヘッダーロゴ部分 */
+    .header-logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header-logo .main-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .header-logo .sub-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: #a0a0a0;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+    .header-divider {
+      width: 100%;
+      max-width: 600px;
+      border: 0;
+      border-top: 1px solid #333333;
+      margin: 0 auto 30px auto;
+    }
+    /* カード要素 */
     .notice-card {
       background-color: #1a1a1a;
       color: #ffffff;
@@ -127,20 +155,28 @@
 </head>
 <body>
 
+  <!-- ヘッダーロゴ -->
+  <div class="header-logo">
+    <h1 class="main-title">cut.in.dante</h1>
+    <div class="sub-title">BARBER SHOP &amp; SHAVING</div>
+  </div>
+
+  <hr class="header-divider">
+
   <div class="notice-card">
 
-    <!-- タイトル -->
+    <!-- お知らせタイトル -->
     <h2 class="title">
       【cut.in.dante 新店舗電話番号決定および<br>ご予約受付についてのお知らせ】
     </h2>
 
     <!-- 挨拶文 -->
     <p class="text">
-      いつも cut.in.dante をご愛顧いただき、誠にありがとうございます。[span_0](start_span)[span_0](end_span)
+      いつも cut.in.dante をご愛顧いただき、誠にありがとうございます。
     </p>
 
     <p class="text">
-      この度、オープンに向けた新店舗の電話番号が決定いたしましたのでお知らせいたします。[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)
+      この度、オープンに向けた新店舗の電話番号が決定いたしましたのでお知らせいたします。
     </p>
 
     <!-- 新電話番号・予約案内枠 -->
@@ -170,7 +206,7 @@
 
     <!-- 現店舗のご案内 -->
     <p class="text" style="margin-bottom: 20px;">
-      現店舗（荻窪タウンセブン店）の営業期間<span class="highlight-red">【10月25日（日）】</span>までのご予約やお問い合せにつきましては、お手数ですが引き続き旧電話番号までご連絡いただけますと幸いです。[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span) 柔軟に対応させていただきます。[span_5](start_span)[span_5](end_span)
+      現店舗（荻窪タウンセブン店）の営業期間<span class="highlight-red">【10月25日（日）】</span>までのご予約やお問い合せにつきましては、お手数ですが引き続き旧電話番号までご連絡いただけますと幸いです。柔軟に対応させていただきます。
     </p>
 
     <!-- 旧電話番号ボタン -->
@@ -179,15 +215,15 @@
       <a href="tel:03-3392-8799" class="btn-sub">
         📞 03-3392-8799
       </a>
-      <span class="sub-note" style="margin-bottom: 0;">※スマホからタップで発信できます[span_6](start_span)[span_6](end_span)</span>
+      <span class="sub-note" style="margin-bottom: 0;">※スマホからタップで発信できます</span>
     </div>
 
     <!-- 結び -->
     <p class="footer-text">
-      荻窪タウンセブンでの45年間の営業の節目として、10月25日の最終営業日までスタッフ一同、感謝を込めて皆様をお迎えいたします。[span_7](start_span)[span_7](end_span)
+      荻窪タウンセブンでの45年間の営業の節目として、10月25日の最終営業日までスタッフ一同、感謝を込めて皆様をお迎えいたします。
     </p>
     <p class="footer-strong">
-      新しい環境で皆様にお会いできるのも楽しみにしております！[span_8](start_span)[span_8](end_span)
+      新しい環境で皆様にお会いできるのも楽しみにしております！
     </p>
 
   </div>
