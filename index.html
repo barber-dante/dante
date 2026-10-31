@@ -88,30 +88,26 @@
             margin-top: -5px;
             margin-bottom: 20px;
         }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            padding: 15px 0;
+        .timeline-list {
+            list-style: none;
+            padding: 15px 5px;
+            margin: 0;
         }
-        .gallery-item {
-            background-color: #1a1a1a;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid #444;
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            border-left: 2px solid #c5a880;
         }
-        .gallery-item img {
-            width: 100%;
-            height: 140px;
-            object-fit: cover;
-            display: block;
+        .timeline-date {
+            font-size: 12px;
+            color: #c5a880;
+            font-weight: bold;
         }
-        .gallery-caption {
-            font-size: 11px;
-            color: #ccc;
-            padding: 6px 8px;
-            text-align: center;
-            background-color: #262626;
+        .timeline-text {
+            font-size: 14px;
+            color: #ddd;
+            margin-top: 2px;
         }
     </style>
 </head>
@@ -178,42 +174,32 @@
                 </p>
             </div>
 
-            <!-- 工事進捗ギャラリー（開閉式エリア） -->
+            <!-- 工事進捗アコーディオン（安定版） -->
             <div style="margin-top: 30px;">
                 <button class="accordion-btn" onclick="toggleAccordion(this)">
-                    <span>📷 新店舗の内装工事ギャラリー</span>
+                    <span>🚧 新店舗の工事進捗・お知らせ</span>
                     <span class="icon">▼</span>
                 </button>
                 <div class="accordion-content">
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="images/kouji01.jpg" alt="解体直後の様子">
-                            <div class="gallery-caption">解体・配管の様子</div>
+                    <div class="timeline-list">
+                        <div class="timeline-item">
+                            <div class="timeline-date">内装工事進行中</div>
+                            <div class="timeline-text">壁面クロス施工および仕切りブースの造作を行いました。</div>
                         </div>
-                        <div class="gallery-item">
-                            <img src="images/kouji02.jpg" alt="店舗入口・骨組み">
-                            <div class="gallery-caption">入口・エントランス</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">配管・基礎工事</div>
+                            <div class="timeline-text">シャンプー台およびカットブースの床下配管・木工事が完了。</div>
                         </div>
-                        <div class="gallery-item">
-                            <img src="images/kouji03.jpg" alt="カウンター下地">
-                            <div class="gallery-caption">カウンター・造作枠</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/kouji04.jpg" alt="壁面タイル・木工事">
-                            <div class="gallery-caption">壁面タイル工事</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/kouji05.jpg" alt="クロス施工中">
-                            <div class="gallery-caption">クロス（壁紙）施工</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/kouji06.jpg" alt="仕切り壁と内装">
-                            <div class="gallery-caption">内装仕上げ・ブース</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">着工</div>
+                            <div class="timeline-text">旧内装の解体作業が完了し、新店舗の造作を開始いたしました。</div>
                         </div>
                     </div>
-                    <p style="font-size: 12px; color: #888; text-align: center; margin: 0 0 15px 0;">
-                        ※オープンに向けて着々と進んでおります！
-                    </p>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <a href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw==" target="_blank" style="display: inline-block; background: #333; color: #c5a880; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 13px; border: 1px solid #c5a880;">
+                            📸 工事現場の写真一覧はInstagramで公開中 ＞
+                        </a>
+                    </div>
                 </div>
             </div>
 
