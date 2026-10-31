@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>店舗移転のお知らせ | Barber.Dante.Tokyo</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
@@ -12,7 +13,6 @@
             background-color: #1a1a1a;
             color: #e0e0e0;
             line-height: 1.6;
-            box-sizing: border-box;
         }
         .container {
             max-width: 500px;
@@ -53,6 +53,142 @@
             margin-top: 0;
             margin-bottom: 15px;
             text-align: center;
+        }
+
+        /* 工事ギャラリー */
+        .gallery-section {
+            margin: 30px 0;
+            padding: 20px 16px;
+            background: #222;
+            border: 1px solid #38332b;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .gallery-heading {
+            color: #c5a880;
+            font-size: 19px;
+            margin: 0 0 8px;
+        }
+        .gallery-intro {
+            color: #aaa;
+            font-size: 13px;
+            margin: 0 0 16px;
+        }
+        .gallery-open-button {
+            display: block;
+            width: 100%;
+            padding: 14px 12px;
+            border: 0;
+            border-radius: 7px;
+            background: #d4b58c;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,.25);
+        }
+        .gallery-open-button:active { transform: translateY(1px); }
+        .gallery-count {
+            display: block;
+            margin-top: 8px;
+            color: #888;
+            font-size: 11px;
+        }
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            overflow-y: auto;
+            padding: 18px 12px 30px;
+            background: rgba(10,10,10,.97);
+        }
+        .gallery-modal.is-open { display: block; }
+        .gallery-modal-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .gallery-modal-header {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 2px 15px;
+            background: rgba(10,10,10,.97);
+            border-bottom: 1px solid #4a4032;
+        }
+        .gallery-modal-title {
+            margin: 0;
+            color: #d4b58c;
+            font-size: 18px;
+        }
+        .gallery-close {
+            flex: 0 0 auto;
+            border: 1px solid #8f795b;
+            border-radius: 6px;
+            background: #262626;
+            color: #fff;
+            padding: 8px 13px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding-top: 15px;
+        }
+        .gallery-photo {
+            display: block;
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            border: 1px solid #514534;
+            border-radius: 6px;
+            background: #292929;
+            cursor: zoom-in;
+        }
+        .gallery-caption {
+            color: #c5a880;
+            font-size: 12px;
+            margin: 5px 2px 0;
+            text-align: left;
+        }
+        .photo-viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            background: rgba(0,0,0,.96);
+        }
+        .photo-viewer.is-open { display: flex; }
+        .photo-viewer img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        .photo-viewer-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            border: 1px solid #c5a880;
+            border-radius: 6px;
+            background: #222;
+            color: #fff;
+            padding: 9px 13px;
+            font-size: 14px;
+        }
+        @media (max-width: 360px) {
+            .gallery-grid { gap: 7px; }
+            .gallery-section { padding: 18px 12px; }
         }
     </style>
 </head>
@@ -119,15 +255,69 @@
                 </p>
             </div>
 
+            <!-- 工事ギャラリーへの入口 -->
+            <section class="gallery-section" aria-labelledby="gallery-heading">
+                <h2 class="gallery-heading" id="gallery-heading">新店舗 OPENまでの記録</h2>
+                <p class="gallery-intro">新しいDanteができるまでの工事の様子をご紹介します。</p>
+                <button class="gallery-open-button" type="button" onclick="openGallery()">
+                    📷　工事中の写真を見る
+                </button>
+                <span class="gallery-count">現在の掲載写真：7枚</span>
+            </section>
+
+            <!-- 工事ギャラリー本体 -->
+            <section class="gallery-modal" id="galleryModal" aria-hidden="true" aria-label="工事ギャラリー">
+                <div class="gallery-modal-inner">
+                    <div class="gallery-modal-header">
+                        <h2 class="gallery-modal-title">新店舗 工事ギャラリー</h2>
+                        <button class="gallery-close" type="button" onclick="closeGallery()">閉じる ✕</button>
+                    </div>
+                    <div class="gallery-grid">
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-01.jpg" alt="新店舗の工事開始時の店内" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">工事開始・解体後の店内</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-02.jpg" alt="新店舗の設備と内装工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">設備・配線工事</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-03.jpg" alt="新店舗入口側の工事風景" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">入口側の工事風景</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-04.jpg" alt="新店舗の壁面内装工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">壁面・内装工事</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-05.jpg" alt="新店舗の壁と天井の工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">天井・壁面の仕上げ</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-06.jpg" alt="新店舗の受付カウンター周辺" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">受付カウンター周辺</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-07.jpg" alt="新店舗の個室スペース工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">店内スペースの施工</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 写真拡大表示 -->
+            <div class="photo-viewer" id="photoViewer" onclick="closePhoto()" aria-label="写真の拡大表示">
+                <button class="photo-viewer-close" type="button" onclick="closePhoto()">閉じる ✕</button>
+                <img id="expandedPhoto" src="" alt="工事写真の拡大表示">
+            </div>
+
             <!-- SNSボタンのブロック -->
             <div style="text-align: center; margin-top: 30px;">
-                <!-- Instagramボタン -->
-                <a href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw==" target="_blank" style="display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <a href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw==" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
                     Instagramで最新情報を見る
                 </a>
                 <br>
-                <!-- X（旧Twitter）ボタン -->
-                <a href="https://x.com/DANTE_ogikubo" target="_blank" style="display: inline-block; background: #000000; color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; border: 1px solid #555; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <a href="https://x.com/DANTE_ogikubo" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #000000; color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; border: 1px solid #555; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
                     X（旧Twitter）を見る
                 </a>
             </div>
@@ -135,7 +325,7 @@
             <!-- 移転情報のブロック -->
             <div style="margin-top: 40px; margin-bottom: 30px;">
                 <h2 style="color: #fff; font-size: 20px; border-left: 4px solid #c5a880; padding-left: 10px;">新店舗のご案内</h2>
-                
+
                 <div style="margin-top: 20px; margin-bottom: 20px;">
                     <p style="color: #c5a880; font-weight: bold; margin: 0;">■ 新店舗オープン時期</p>
                     <p style="color: #fff; font-size: 18px; margin: 5px 0 0 0;">2026年 11月初旬 予定</p>
@@ -156,5 +346,35 @@
             </div>
         </main>
     </div>
+
+    <script>
+        function openGallery() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGallery() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            closePhoto();
+        }
+        function showPhoto(src) {
+            const viewer = document.getElementById('photoViewer');
+            document.getElementById('expandedPhoto').src = src;
+            viewer.classList.add('is-open');
+        }
+        function closePhoto() {
+            document.getElementById('photoViewer').classList.remove('is-open');
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePhoto();
+                closeGallery();
+            }
+        });
+    </script>
 </body>
 </html>
