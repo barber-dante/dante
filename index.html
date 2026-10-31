@@ -54,61 +54,6 @@
             margin-bottom: 15px;
             text-align: center;
         }
-
-        /* アコーディオン（開閉エリア）のスタイル */
-        .accordion-btn {
-            width: 100%;
-            background-color: #262626;
-            color: #c5a880;
-            border: 1px solid #c5a880;
-            padding: 15px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: center;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .accordion-btn:hover {
-            background-color: #333;
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            background-color: #222;
-            border-radius: 0 0 8px 8px;
-            border: 1px solid #333;
-            border-top: none;
-            padding: 0 15px;
-            margin-top: -5px;
-            margin-bottom: 20px;
-        }
-        .timeline-list {
-            list-style: none;
-            padding: 15px 5px;
-            margin: 0;
-        }
-        .timeline-item {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 15px;
-            border-left: 2px solid #c5a880;
-        }
-        .timeline-date {
-            font-size: 12px;
-            color: #c5a880;
-            font-weight: bold;
-        }
-        .timeline-text {
-            font-size: 14px;
-            color: #ddd;
-            margin-top: 2px;
-        }
     </style>
 </head>
 <body>
@@ -174,35 +119,6 @@
                 </p>
             </div>
 
-            <!-- 工事進捗アコーディオン（安定版） -->
-            <div style="margin-top: 30px;">
-                <button class="accordion-btn" onclick="toggleAccordion(this)">
-                    <span>🚧 新店舗の工事進捗・お知らせ</span>
-                    <span class="icon">▼</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="timeline-list">
-                        <div class="timeline-item">
-                            <div class="timeline-date">内装工事進行中</div>
-                            <div class="timeline-text">壁面クロス施工および仕切りブースの造作を行いました。</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">配管・基礎工事</div>
-                            <div class="timeline-text">シャンプー台およびカットブースの床下配管・木工事が完了。</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">着工</div>
-                            <div class="timeline-text">旧内装の解体作業が完了し、新店舗の造作を開始いたしました。</div>
-                        </div>
-                    </div>
-                    <div style="text-align: center; margin-bottom: 15px;">
-                        <a href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw==" target="_blank" style="display: inline-block; background: #333; color: #c5a880; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 13px; border: 1px solid #c5a880;">
-                            📸 工事現場の写真一覧はInstagramで公開中 ＞
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <!-- SNSボタンのブロック -->
             <div style="text-align: center; margin-top: 30px;">
                 <!-- Instagramボタン -->
@@ -240,20 +156,5 @@
             </div>
         </main>
     </div>
-
-    <!-- 開閉動作のためのスクリプト -->
-    <script>
-        function toggleAccordion(btn) {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('.icon');
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0px';
-                icon.textContent = '▼';
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                icon.textContent = '▲';
-            }
-        }
-    </script>
 </body>
 </html>
