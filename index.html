@@ -54,6 +54,65 @@
             margin-bottom: 15px;
             text-align: center;
         }
+
+        /* アコーディオン（開閉エリア）のスタイル */
+        .accordion-btn {
+            width: 100%;
+            background-color: #262626;
+            color: #c5a880;
+            border: 1px solid #c5a880;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-btn:hover {
+            background-color: #333;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background-color: #222;
+            border-radius: 0 0 8px 8px;
+            border: 1px solid #333;
+            border-top: none;
+            padding: 0 15px;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 15px 0;
+        }
+        .gallery-item {
+            background-color: #1a1a1a;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            font-size: 11px;
+            color: #ccc;
+            padding: 6px 8px;
+            text-align: center;
+            background-color: #262626;
+        }
     </style>
 </head>
 <body>
@@ -119,6 +178,45 @@
                 </p>
             </div>
 
+            <!-- 工事進捗ギャラリー（開閉式エリア） -->
+            <div style="margin-top: 30px;">
+                <button class="accordion-btn" onclick="toggleAccordion(this)">
+                    <span>📷 新店舗の内装工事ギャラリー</span>
+                    <span class="icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/kouji01.jpg" alt="解体直後の様子">
+                            <div class="gallery-caption">解体・配管の様子</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kouji02.jpg" alt="店舗入口・骨組み">
+                            <div class="gallery-caption">入口・エントランス</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kouji03.jpg" alt="カウンター下地">
+                            <div class="gallery-caption">カウンター・造作枠</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kouji04.jpg" alt="壁面タイル・木工事">
+                            <div class="gallery-caption">壁面タイル工事</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kouji05.jpg" alt="クロス施工中">
+                            <div class="gallery-caption">クロス（壁紙）施工</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kouji06.jpg" alt="仕切り壁と内装">
+                            <div class="gallery-caption">内装仕上げ・ブース</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 12px; color: #888; text-align: center; margin: 0 0 15px 0;">
+                        ※オープンに向けて着々と進んでおります！
+                    </p>
+                </div>
+            </div>
+
             <!-- SNSボタンのブロック -->
             <div style="text-align: center; margin-top: 30px;">
                 <!-- Instagramボタン -->
@@ -156,5 +254,20 @@
             </div>
         </main>
     </div>
+
+    <!-- 開閉動作のためのスクリプト -->
+    <script>
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.icon');
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.textContent = '▼';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.textContent = '▲';
+            }
+        }
+    </script>
 </body>
 </html>
