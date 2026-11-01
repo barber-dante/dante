@@ -56,6 +56,110 @@
             text-align: center;
         }
 
+        /* Dante瓦版 */
+        .news-board {
+            margin: 30px 0;
+            padding: 20px 17px;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    #29342d,
+                    #29342d 28px,
+                    #2d3931 29px,
+                    #2d3931 30px
+                );
+            border: 7px solid #705239;
+            border-radius: 5px;
+            box-shadow:
+                0 5px 15px rgba(0,0,0,.55),
+                inset 0 0 15px rgba(0,0,0,.35);
+            position: relative;
+        }
+        .news-board::before {
+            content: "●";
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            color: #d1b17d;
+            font-size: 11px;
+        }
+        .news-board::after {
+            content: "●";
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            color: #d1b17d;
+            font-size: 11px;
+        }
+        .news-title {
+            color: #f1e5c9;
+            font-family: serif;
+            font-size: 27px;
+            text-align: center;
+            margin: 5px 0 3px;
+            letter-spacing: 3px;
+            text-shadow: 1px 2px 3px #111;
+        }
+        .news-subtitle {
+            color: #c5bda8;
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 3px;
+            margin: 0 0 18px;
+        }
+        .news-item {
+            padding: 13px 5px;
+            border-top: 1px dashed rgba(230,225,200,.4);
+        }
+        .news-date {
+            color: #d8c79e;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .news-item h3 {
+            color: #fff3d7;
+            font-size: 15px;
+            margin: 3px 0 7px;
+        }
+        .news-item p {
+            color: #e2e0d5;
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.8;
+        }
+        .news-links {
+            display: flex;
+            gap: 9px;
+            margin-top: 12px;
+        }
+        .news-link {
+            flex: 1;
+            display: block;
+            text-align: center;
+            padding: 10px 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .news-instagram {
+            background: linear-gradient(45deg,#f09433,#dc2743,#bc1888);
+        }
+        .news-x {
+            background: #080808;
+            border: 1px solid #888;
+        }
+        .news-footer {
+            color: #c9c1ac;
+            font-size: 10px;
+            text-align: center;
+            margin: 12px 0 0;
+            letter-spacing: 1px;
+        }
+
         /* ギャラリー共通 */
         .gallery-section {
             margin: 30px 0;
@@ -190,6 +294,7 @@
         @media (max-width: 360px) {
             .gallery-grid { gap: 7px; }
             .gallery-section { padding: 18px 12px; }
+            .news-links { gap: 6px; }
         }
     </style>
 </head>
@@ -214,7 +319,6 @@
                     昭和・平成・令和と45年間の長きにわたり、この場所で本当に多くのお客様に支えられ、共に歩んでこられたことは私たちにとってかけがえのない財産です。これまで温かいご支援とご愛顧をいただきましたこと、スタッフ一同心より深く御礼申し上げます。本当にありがとうございました。
                 </p>
 
-                <!-- 新電話番号・予約案内枠 -->
                 <div style="background-color: #1e1e1e; border-left: 4px solid #c5a880; padding: 15px; margin: 20px 0; border-radius: 4px;">
                     <p style="color: #c5a880; font-weight: bold; margin: 0 0 10px 0;">■ 新店舗電話番号</p>
                     <a href="tel:0362769397" style="display: block; background: #d4b58c; color: #1a1a1a; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 20px; margin-bottom: 5px;">
@@ -247,6 +351,46 @@
                     これまでの感謝を胸に、新しい店舗でも皆様に心地よい時間をお届けできるよう、精一杯準備を進めてまいります。新しい環境で皆様に笑顔でお会いできることを、スタッフ一同心より楽しみにしております！
                 </p>
             </div>
+
+            <!-- Dante瓦版 -->
+            <section class="news-board" aria-label="Dante瓦版">
+                <h2 class="news-title">Dante瓦版</h2>
+                <p class="news-subtitle">BARBER.DANTE.TOKYO NEWS</p>
+
+                <div class="news-item">
+                    <div class="news-date">2026.11.01</div>
+                    <h3>📷 PHOTO UPDATE｜写真を更新しました</h3>
+                    <p>
+                        ホームページのギャラリーに写真を追加しました！<br>
+                        ・新店舗が出来上がるまでの記録<br>
+                        ・ありがとDante（旧店舗）の思い出<br>
+                        ぜひご覧ください。
+                    </p>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">2026.11.01</div>
+                    <h3>🎬 SHORT MOVIE｜動画を公開しました</h3>
+                    <p>
+                        Instagram・Xにて、Danteのショートムービーを公開しました！<br>
+                        お店のエンブレムやスタッフの仕事風景、店内の様子などを動画でご紹介しています。ぜひご覧ください！
+                    </p>
+                    <div class="news-links">
+                        <a class="news-link news-instagram"
+                           href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw=="
+                           target="_blank" rel="noopener noreferrer">
+                            Instagramで見る
+                        </a>
+                        <a class="news-link news-x"
+                           href="https://x.com/DANTE_ogikubo"
+                           target="_blank" rel="noopener noreferrer">
+                            Xで見る
+                        </a>
+                    </div>
+                </div>
+
+                <p class="news-footer">これからもDanteの最新情報をお届けします。</p>
+            </section>
 
             <!-- 大切なお客さまへカード -->
             <div style="background-color: #222; border-left: 4px solid #c5a880; padding: 15px; margin-top: 20px; border-radius: 4px;">
