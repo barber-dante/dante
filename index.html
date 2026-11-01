@@ -56,7 +56,7 @@
             text-align: center;
         }
 
-        /* 工事ギャラリー */
+        /* ギャラリー共通 */
         .gallery-section {
             margin: 30px 0;
             padding: 20px 16px;
@@ -256,26 +256,25 @@
                 </p>
             </div>
 
-            <!-- 工事ギャラリーへの入口 -->
+            <!-- 新店舗工事ギャラリー入口 -->
             <section class="gallery-section" aria-labelledby="gallery-heading">
                 <h2 class="gallery-heading" id="gallery-heading">新店舗 OPENまでの記録</h2>
                 <p class="gallery-intro">新しいDanteができるまでの工事の様子をご紹介します。</p>
-                <button class="gallery-open-button" type="button" onclick="openGallery()">
+                <button class="gallery-open-button" type="button" onclick="openGallery('newGalleryModal')">
                     📷　工事中の写真を見る
                 </button>
-                <span class="gallery-count">現在の掲載写真：14枚</span>
+                <span class="gallery-count">現在の掲載写真：19枚</span>
             </section>
 
-            <!-- 工事ギャラリー本体 -->
-            <section class="gallery-modal" id="galleryModal" aria-hidden="true" aria-label="工事ギャラリー">
+            <!-- 新店舗工事ギャラリー -->
+            <section class="gallery-modal" id="newGalleryModal" aria-hidden="true" aria-label="新店舗工事ギャラリー">
                 <div class="gallery-modal-inner">
                     <div class="gallery-modal-header">
                         <h2 class="gallery-modal-title">新店舗 工事ギャラリー</h2>
-                        <button class="gallery-close" type="button" onclick="closeGallery()">閉じる ✕</button>
+                        <button class="gallery-close" type="button" onclick="closeGallery('newGalleryModal')">閉じる ✕</button>
                     </div>
                     <div class="gallery-grid">
 
-                        <!-- 新店舗外観 -->
                         <div>
                             <img class="gallery-photo" src="images/gallery-08.jpg" alt="新店舗外観①" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">外観①</p>
@@ -284,38 +283,34 @@
                             <img class="gallery-photo" src="images/gallery-09.jpg" alt="新店舗外観②" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">外観②</p>
                         </div>
-
-                        <!-- 既存の工事写真 -->
                         <div>
-                            <img class="gallery-photo" src="images/gallery-01.jpg" alt="新店舗の工事開始時の店内" onclick="showPhoto(this.src)" loading="lazy">
+                            <img class="gallery-photo" src="images/gallery-01.jpg" alt="工事開始・解体後の店内" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">工事開始・解体後の店内</p>
                         </div>
                         <div>
-                            <img class="gallery-photo" src="images/gallery-02.jpg" alt="新店舗の設備と内装工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <img class="gallery-photo" src="images/gallery-02.jpg" alt="設備・配線工事" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">設備・配線工事</p>
                         </div>
                         <div>
-                            <img class="gallery-photo" src="images/gallery-03.jpg" alt="新店舗入口側の工事風景" onclick="showPhoto(this.src)" loading="lazy">
+                            <img class="gallery-photo" src="images/gallery-03.jpg" alt="入口側の工事風景" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">入口側の工事風景</p>
                         </div>
                         <div>
-                            <img class="gallery-photo" src="images/gallery-04.jpg" alt="新店舗の壁面内装工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <img class="gallery-photo" src="images/gallery-04.jpg" alt="壁面・内装工事" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">壁面・内装工事</p>
                         </div>
                         <div>
-                            <img class="gallery-photo" src="images/gallery-05.jpg" alt="新店舗の壁と天井の工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <img class="gallery-photo" src="images/gallery-05.jpg" alt="天井・壁面の仕上げ" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">天井・壁面の仕上げ</p>
                         </div>
                         <div>
-                            <img class="gallery-photo" src="images/gallery-06.jpg" alt="新店舗の受付カウンター周辺" onclick="showPhoto(this.src)" loading="lazy">
+                            <img class="gallery-photo" src="images/gallery-06.jpg" alt="受付カウンター周辺" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">受付カウンター周辺</p>
                         </div>
                         <div>
-                            <img class="gallery-photo" src="images/gallery-07.jpg" alt="新店舗の個室スペース工事" onclick="showPhoto(this.src)" loading="lazy">
+                            <img class="gallery-photo" src="images/gallery-07.jpg" alt="店内スペースの施工" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">店内スペースの施工</p>
                         </div>
-
-                        <!-- 壁紙を貼る前 -->
                         <div>
                             <img class="gallery-photo" src="images/gallery-10.jpg" alt="壁紙貼る前①" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">壁紙貼る前①</p>
@@ -324,8 +319,6 @@
                             <img class="gallery-photo" src="images/gallery-11.jpg" alt="壁紙貼る前②" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">壁紙貼る前②</p>
                         </div>
-
-                        <!-- 壁紙を貼った後 -->
                         <div>
                             <img class="gallery-photo" src="images/gallery-12.jpg" alt="壁紙貼った後①" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">壁紙貼った後①</p>
@@ -338,6 +331,105 @@
                             <img class="gallery-photo" src="images/gallery-14.jpg" alt="壁紙貼った後③" onclick="showPhoto(this.src)" loading="lazy">
                             <p class="gallery-caption">壁紙貼った後③</p>
                         </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-15.jpg" alt="新店舗工事写真15" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">新店舗工事写真⑮</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-16.jpg" alt="新店舗工事写真16" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">新店舗工事写真⑯</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-17.jpg" alt="新店舗工事写真17" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">新店舗工事写真⑰</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-18.jpg" alt="新店舗工事写真18" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">新店舗工事写真⑱</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/gallery-19.jpg" alt="新店舗工事写真19" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">新店舗工事写真⑲</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 旧 cut.in.dante ギャラリー入口 -->
+            <section class="gallery-section" aria-labelledby="old-gallery-heading">
+                <h2 class="gallery-heading" id="old-gallery-heading">ありがとDante</h2>
+                <p class="gallery-intro">
+                    45年間、本当にありがとうございました。<br>
+                    たくさんの出会いと笑顔に感謝を込めて。
+                </p>
+                <button class="gallery-open-button" type="button" onclick="openGallery('oldGalleryModal')">
+                    ❤️　ありがとDanteの写真を見る
+                </button>
+                <span class="gallery-count">旧店舗の思い出：12枚</span>
+            </section>
+
+            <!-- 旧 cut.in.dante ギャラリー -->
+            <section class="gallery-modal" id="oldGalleryModal" aria-hidden="true" aria-label="ありがとDanteギャラリー">
+                <div class="gallery-modal-inner">
+                    <div class="gallery-modal-header">
+                        <h2 class="gallery-modal-title">ありがとDante</h2>
+                        <button class="gallery-close" type="button" onclick="closeGallery('oldGalleryModal')">閉じる ✕</button>
+                    </div>
+                    <p style="color:#c5a880; text-align:center; font-size:14px; margin:18px 5px 5px;">
+                        45年間、支えてくださった皆様へ。<br>
+                        心からの感謝を込めて。
+                    </p>
+                    <div class="gallery-grid">
+
+                        <div>
+                            <img class="gallery-photo" src="images/old-01.jpg" alt="旧 cut.in.dante の思い出写真1" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ①</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-02.jpg" alt="旧 cut.in.dante の思い出写真2" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ②</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-03.jpg" alt="旧 cut.in.dante の思い出写真3" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ③</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-04.jpg" alt="旧 cut.in.dante の思い出写真4" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ④</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-05.jpg" alt="旧 cut.in.dante の思い出写真5" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑤</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-06.jpg" alt="旧 cut.in.dante の思い出写真6" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑥</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-07.jpg" alt="旧 cut.in.dante の思い出写真7" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑦</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-08.jpg" alt="旧 cut.in.dante の思い出写真8" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑧</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-09.jpg" alt="旧 cut.in.dante の思い出写真9" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑨</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-10.jpg" alt="旧 cut.in.dante の思い出写真10" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑩</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-11.jpg" alt="旧 cut.in.dante の思い出写真11" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑪</p>
+                        </div>
+                        <div>
+                            <img class="gallery-photo" src="images/old-12.jpg" alt="旧 cut.in.dante の思い出写真12" onclick="showPhoto(this.src)" loading="lazy">
+                            <p class="gallery-caption">ありがとDante ⑫</p>
+                        </div>
 
                     </div>
                 </div>
@@ -346,10 +438,10 @@
             <!-- 写真拡大表示 -->
             <div class="photo-viewer" id="photoViewer" onclick="closePhoto()" aria-label="写真の拡大表示">
                 <button class="photo-viewer-close" type="button" onclick="closePhoto()">閉じる ✕</button>
-                <img id="expandedPhoto" src="" alt="工事写真の拡大表示">
+                <img id="expandedPhoto" src="" alt="写真の拡大表示">
             </div>
 
-            <!-- SNSボタンのブロック -->
+            <!-- SNSボタン -->
             <div style="text-align: center; margin-top: 30px;">
                 <a href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw==" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
                     Instagramで最新情報を見る
@@ -360,7 +452,7 @@
                 </a>
             </div>
 
-            <!-- 移転情報のブロック -->
+            <!-- 移転情報 -->
             <div style="margin-top: 40px; margin-bottom: 30px;">
                 <h2 style="color: #fff; font-size: 20px; border-left: 4px solid #c5a880; padding-left: 10px;">新店舗のご案内</h2>
 
@@ -374,7 +466,7 @@
                     <p style="color: #fff; font-size: 16px; margin: 5px 0 0 0;">東京都杉並区天沼3丁目29-14（教会通り・3階建ての1階）</p>
                 </div>
 
-                <!-- Googleマイマップ埋め込み -->
+                <!-- Googleマイマップ -->
                 <div style="margin-bottom: 20px; border-top: 1px solid #333; padding-top: 20px;">
                     <p style="color: #c5a880; font-weight: bold; margin: 0 0 10px 0;">■ 新店舗マップ</p>
                     <div style="width: 100%; height: 300px; border-radius: 8px; overflow: hidden; border: 1px solid #444;">
@@ -386,31 +478,39 @@
     </div>
 
     <script>
-        function openGallery() {
-            const modal = document.getElementById('galleryModal');
+        function openGallery(galleryId) {
+            const modal = document.getElementById(galleryId);
             modal.classList.add('is-open');
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
         }
-        function closeGallery() {
-            const modal = document.getElementById('galleryModal');
+
+        function closeGallery(galleryId) {
+            const modal = document.getElementById(galleryId);
             modal.classList.remove('is-open');
             modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
             closePhoto();
         }
+
         function showPhoto(src) {
             const viewer = document.getElementById('photoViewer');
             document.getElementById('expandedPhoto').src = src;
             viewer.classList.add('is-open');
         }
+
         function closePhoto() {
             document.getElementById('photoViewer').classList.remove('is-open');
         }
+
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closePhoto();
-                closeGallery();
+                document.querySelectorAll('.gallery-modal.is-open').forEach(function(modal) {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                });
+                document.body.style.overflow = '';
             }
         });
     </script>
