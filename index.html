@@ -7,11 +7,13 @@
 <title>Barber.Dante.Tokyo｜荻窪の理容室</title>
 <style>
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{font-family:'Helvetica Neue',Arial,sans-serif;margin:0;background:#1a1a1a;color:#e0e0e0;line-height:1.7}
 .container{max-width:500px;margin:0 auto;padding:20px}
 header{text-align:center;padding:30px 0 20px;border-bottom:2px solid #333}
 .shop-logo{display:block;width:100%;max-width:420px;height:auto;margin:0 auto}
 .subtitle{font-size:11px;color:#888;margin-top:5px;letter-spacing:2px}
+.top-menu-button{display:block;margin:22px 0 10px;padding:14px;background:#d4b58c;color:#1a1a1a;text-align:center;text-decoration:none;font-weight:bold;border-radius:7px;font-size:16px;box-shadow:0 4px 10px rgba(0,0,0,.3)}
 .notice-card{background:#262626;border:1px solid #333;border-radius:8px;padding:25px 20px;margin:30px 0;box-shadow:0 4px 15px rgba(0,0,0,.5)}
 .notice-title{color:#d4b58c;font-size:18px;font-weight:bold;margin:0 0 15px;text-align:center}
 .news-board{margin:30px 0;padding:20px 17px;background:repeating-linear-gradient(0deg,#29342d,#29342d 28px,#2d3931 29px,#2d3931 30px);border:7px solid #705239;border-radius:5px;box-shadow:0 5px 15px rgba(0,0,0,.55),inset 0 0 15px rgba(0,0,0,.35);position:relative}
@@ -50,6 +52,32 @@ header{text-align:center;padding:30px 0 20px;border-bottom:2px solid #333}
 .reservation-note{background:#222;border-left:4px solid #c5a880;padding:16px;margin:25px 0;border-radius:4px}
 .reservation-note h3{color:#d4b58c;font-size:16px;margin:0 0 8px}
 .reservation-note p{color:#ccc;font-size:13px;margin:0;line-height:1.8}
+
+/* 料金表 */
+.price-section{margin:30px 0;padding:22px 16px;background:#222;border:1px solid #514534;border-radius:8px}
+.price-heading{color:#d4b58c;font-size:25px;text-align:center;margin:0 0 3px;letter-spacing:2px}
+.price-subheading{color:#999;text-align:center;font-size:10px;letter-spacing:3px;margin:0 0 22px}
+.price-intro{color:#ccc;text-align:center;font-size:13px;margin:0 0 20px}
+.price-category{color:#d4b58c;font-size:18px;border-bottom:1px solid #705c40;padding:0 0 8px;margin:25px 0 10px}
+.price-featured{background:linear-gradient(135deg,#332d23,#25221d);border:1px solid #b99a6b;border-radius:8px;padding:16px 13px;margin:12px 0 17px}
+.price-featured-label{color:#c5a880;font-size:11px;letter-spacing:2px;font-weight:bold}
+.price-featured-name{color:#fff;font-size:16px;font-weight:bold;margin:5px 0}
+.price-featured-desc{color:#c9c0b1;font-size:12px}
+.price-featured-amount{color:#e5c493;font-size:29px;font-weight:bold;text-align:right;line-height:1.3;margin-top:5px}
+.price-list{margin:0;padding:0;list-style:none}
+.price-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:12px 2px;border-bottom:1px solid #3e3a33}
+.price-name{color:#eee;font-size:14px;flex:1;line-height:1.6}
+.price-desc{display:block;color:#999;font-size:11px;line-height:1.5;margin-top:2px}
+.price-amount{color:#e2c18f;font-size:15px;font-weight:bold;white-space:nowrap;text-align:right}
+.price-note{color:#aaa;font-size:11px;line-height:1.7;margin:12px 2px 0}
+.price-info{margin-top:22px;padding:14px;background:#292720;border:1px solid #65543b;border-radius:6px}
+.price-info h3{color:#d4b58c;font-size:16px;text-align:center;margin:0 0 8px}
+.price-info p{color:#ddd;font-size:12px;margin:0;line-height:1.8}
+.price-benefit{margin-top:13px;padding:15px 12px;background:#302a20;border-radius:6px;text-align:center}
+.price-benefit-title{color:#e3c394;font-size:17px;font-weight:bold;margin:0 0 5px}
+.price-benefit p{color:#eee;font-size:13px;margin:0;line-height:1.8}
+.price-back{display:block;text-align:center;margin-top:18px;color:#c5a880;font-size:12px;text-decoration:underline}
+
 .youtube-section{margin:30px 0;padding:18px;background:#222;border:1px solid #38332b;border-radius:8px;text-align:center}
 .youtube-section h2{color:#c5a880;font-size:19px;margin:0 0 12px}
 .youtube-frame{position:relative;width:100%;aspect-ratio:16/9}
@@ -83,6 +111,9 @@ header{text-align:center;padding:30px 0 20px;border-bottom:2px solid #333}
 .gallery-section{padding:18px 12px}
 .news-links{gap:6px}
 .hours-row{font-size:13px}
+.price-section{padding:19px 12px}
+.price-name{font-size:13px}
+.price-amount{font-size:14px}
 }
 </style>
 </head>
@@ -135,6 +166,9 @@ Instagram・Xにて、Danteのショートムービーを公開しました！<b
 <p class="news-footer">これからもDanteの最新情報をお届けします。</p>
 </section>
 
+<!-- 料金表への案内 -->
+<a class="top-menu-button" href="#price-menu">✂　メニュー・料金表はこちら　▼</a>
+
 <!-- 2. 新店舗電話番号・予約案内 -->
 <div class="phone-card">
 <p style="color:#c5a880;font-weight:bold;margin:0 0 10px">■ 新店舗電話番号</p>
@@ -177,7 +211,114 @@ Instagram・Xにて、Danteのショートムービーを公開しました！<b
 </div>
 </section>
 
-<!-- 4. 営業時間 -->
+<!-- 4. 料金表 -->
+<section class="price-section" id="price-menu">
+<h2 class="price-heading">MENU & PRICE</h2>
+<p class="price-subheading">BARBER.DANTE.TOKYO</p>
+<p class="price-intro">
+落ち着いた半個室空間で、ゆったりとしたひとときを。
+</p>
+
+<div class="price-featured">
+<div class="price-featured-label">DANTE STANDARD COURSE</div>
+<div class="price-featured-name">オールコース</div>
+<div class="price-featured-desc">カット・シャンプー・顔剃り・スカルプクレンジング付き</div>
+<div class="price-featured-amount">5,800円</div>
+</div>
+
+<h3 class="price-category">カットメニュー</h3>
+<ul class="price-list">
+<li class="price-row">
+<span class="price-name">カット＆シャンプー<span class="price-desc">スカルプクレンジング付き</span></span>
+<span class="price-amount">4,800円</span>
+</li>
+<li class="price-row">
+<span class="price-name">カットブロー<span class="price-desc">カットのみ</span></span>
+<span class="price-amount">3,600円</span>
+</li>
+</ul>
+
+<h3 class="price-category">学生カット</h3>
+<ul class="price-list">
+<li class="price-row"><span class="price-name">小学生カットのみ</span><span class="price-amount">3,000円</span></li>
+<li class="price-row"><span class="price-name">小学生フルコース<span class="price-desc">シャンプー・顔剃り付き</span></span><span class="price-amount">3,500円</span></li>
+<li class="price-row"><span class="price-name">中学生カットのみ</span><span class="price-amount">3,500円</span></li>
+<li class="price-row"><span class="price-name">中学生フルコース<span class="price-desc">シャンプー・顔剃り付き</span></span><span class="price-amount">4,000円</span></li>
+<li class="price-row"><span class="price-name">高校生カットのみ</span><span class="price-amount">4,000円</span></li>
+<li class="price-row"><span class="price-name">高校生フルコース<span class="price-desc">シャンプー・顔剃り付き</span></span><span class="price-amount">4,500円</span></li>
+</ul>
+
+<h3 class="price-category">シェービング・その他</h3>
+<ul class="price-list">
+<li class="price-row"><span class="price-name">シェービングのみ</span><span class="price-amount">2,500円</span></li>
+<li class="price-row"><span class="price-name">マイルドシェービング<span class="price-desc">オプション</span></span><span class="price-amount">＋500円</span></li>
+<li class="price-row"><span class="price-name">シャンプーブロー<span class="price-desc">スカルプクレンジング付き</span></span><span class="price-amount">2,500円</span></li>
+<li class="price-row"><span class="price-name">シャンプー・シェービング・ブロー</span><span class="price-amount">3,300円</span></li>
+<li class="price-row"><span class="price-name">レディースシェービング</span><span class="price-amount">4,000円</span></li>
+</ul>
+
+<h3 class="price-category">カラー・パーマ</h3>
+<ul class="price-list">
+<li class="price-row">
+<span class="price-name">白髪ぼかし<span class="price-desc">カット・シャンプー・顔剃り付き</span></span>
+<span class="price-amount">7,800円</span>
+</li>
+<li class="price-row">
+<span class="price-name">白髪ぼかしのみ<span class="price-desc">カットなし・シャンプー・顔剃り付き</span></span>
+<span class="price-amount">5,500円</span>
+</li>
+<li class="price-row">
+<span class="price-name">白髪染め<span class="price-desc">カット・シャンプー・顔剃り付き</span></span>
+<span class="price-amount">8,300円</span>
+</li>
+<li class="price-row">
+<span class="price-name">白髪染めのみ<span class="price-desc">カットなし・シャンプー付き／顔剃り＋500円</span></span>
+<span class="price-amount">5,500円</span>
+</li>
+<li class="price-row">
+<span class="price-name">おしゃれ染め<span class="price-desc">カット・シャンプー・顔剃り付き</span></span>
+<span class="price-amount">9,300円</span>
+</li>
+<li class="price-row">
+<span class="price-name">おしゃれ染めのみ<span class="price-desc">カットなし・シャンプー付き／顔剃り＋500円</span></span>
+<span class="price-amount">6,500円</span>
+</li>
+<li class="price-row">
+<span class="price-name">マニキュア<span class="price-desc">カット・シャンプー・顔剃り付き</span></span>
+<span class="price-amount">9,300円</span>
+</li>
+<li class="price-row">
+<span class="price-name">マニキュアのみ<span class="price-desc">カットなし・シャンプー付き／顔剃り＋500円</span></span>
+<span class="price-amount">6,500円</span>
+</li>
+<li class="price-row">
+<span class="price-name">パーマ<span class="price-desc">カット・シャンプー・顔剃り付き</span></span>
+<span class="price-amount">9,300円〜</span>
+</li>
+</ul>
+
+<p class="price-note">
+※シャンプー付きメニューにはスカルプクレンジングが付きます。<br>
+※カラーのカットなしメニューは、シャンプー付きです。顔剃りをご希望の場合は＋500円となります（白髪ぼかしのみは顔剃り付き）。<br>
+※マイルドシェービングはオプション＋500円です。<br>
+※パーマは髪の長さ・施術内容により料金が変わる場合がございます。
+</p>
+
+<div class="price-info">
+<h3>🎁 Danteのお客様特典</h3>
+<div class="price-benefit">
+<p class="price-benefit-title">35日以内の再来店で300円引き！</p>
+<p>前回来店日から35日以内のご来店で、全メニュー300円引き。</p>
+</div>
+<div class="price-benefit">
+<p class="price-benefit-title">8回来店ごとに嬉しい特典！</p>
+<p>ご来店1回につきスタンプ1個。<br>8個貯まるごとに特典をご用意！<br>何がもらえるかは、その時のお楽しみ！</p>
+</div>
+</div>
+<a class="price-back" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">▲ ページ上部へ戻る</a>
+</section>
+
+<!-- 5. 営業時間 -->
 <section class="hours-card">
 <h2>営業時間のご案内</h2>
 <div class="hours-row">
@@ -194,7 +335,7 @@ Instagram・Xにて、Danteのショートムービーを公開しました！<b
 </div>
 </section>
 
-<!-- 5. ご予約について -->
+<!-- 6. ご予約について -->
 <section class="reservation-note">
 <h3>ご予約優先制について</h3>
 <p>
@@ -203,7 +344,7 @@ Instagram・Xにて、Danteのショートムービーを公開しました！<b
 </p>
 </section>
 
-<!-- 6. 新店舗のご案内・地図 -->
+<!-- 7. 新店舗のご案内・地図 -->
 <div class="shop-info">
 <h2>新店舗のご案内</h2>
 <div style="margin-top:20px;margin-bottom:20px">
@@ -225,7 +366,7 @@ Instagram・Xにて、Danteのショートムービーを公開しました！<b
 </div>
 </div>
 
-<!-- 7. YouTube動画 -->
+<!-- 8. YouTube動画 -->
 <section class="youtube-section">
 <h2>🎬 Dante ショートムービー</h2>
 <div class="youtube-frame">
@@ -236,7 +377,7 @@ YouTubeチャンネルを見る
 </a>
 </section>
 
-<!-- 8. 新店舗工事ギャラリー入口 -->
+<!-- 9. 新店舗工事ギャラリー入口 -->
 <section class="gallery-section">
 <h2 class="gallery-heading">新店舗 OPENまでの記録</h2>
 <p class="gallery-intro">新しいDanteができるまでの工事の様子をご紹介します。</p>
@@ -255,7 +396,7 @@ YouTubeチャンネルを見る
 </div>
 </section>
 
-<!-- 9. ありがとDante -->
+<!-- 10. ありがとDante -->
 <section class="gallery-section">
 <h2 class="gallery-heading">ありがとDante</h2>
 <p class="gallery-intro">
@@ -280,7 +421,7 @@ YouTubeチャンネルを見る
 </div>
 </section>
 
-<!-- 10. 旧店舗の営業終了・感謝のお知らせ -->
+<!-- 11. 旧店舗の営業終了・感謝のお知らせ -->
 <div class="notice-card">
 <h2 class="notice-title">【荻窪タウンセブン店 45年間の感謝を込めて】</h2>
 <p style="font-size:14px;color:#ccc;margin-top:0">
@@ -306,7 +447,7 @@ YouTubeチャンネルを見る
 <img id="expandedPhoto" src="" alt="写真の拡大表示">
 </div>
 
-<!-- 11. SNSボタン -->
+<!-- 12. SNSボタン -->
 <div style="text-align:center;margin-top:30px">
 <a href="https://www.instagram.com/barber.dante.tokyo?stkn=MTRsd3RhaDF1NXRodw==" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);color:#fff;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;margin-bottom:15px;box-shadow:0 4px 6px rgba(0,0,0,.3)">
 Instagramで最新情報を見る
